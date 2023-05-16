@@ -22,8 +22,19 @@ document.addEventListener('DOMContentLoaded', function() {
           duckDisplay.style.display = 'block';
         });
       });
+
+      const likesButton = document.querySelector('#duck-display-likes');
+      likesButton.addEventListener('click', () => {
+        const currentLikes = parseInt(likesCountElement.textContent);
+        // const duckIndex = duckNav.querySelector('.active').dataset.index;
+        // data[duckIndex].likes = currentLikes + 1;
+        likesCountElement.textContent = currentLikes + 1;
+      });
     });
 });
+
+
+
 
 
 
