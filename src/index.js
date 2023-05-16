@@ -13,27 +13,20 @@ document.addEventListener('DOMContentLoaded', function() {
         img.src = duck.img_url;
         img.alt = duck.name;
         duckNav.appendChild(img);
-        
-      });
-    })
-});  fetch('http://localhost:3000/ducks')
-.then(response => response.json())
-.then(data => {
-  data.forEach(duck => {
-    const img = document.createElement('img');
-    img.src = duck.img_url;
-    img.alt = duck.name;
-    duckNav.appendChild(img);
 
-    img.addEventListener('click', () => {
-      duckNameElement.textContent = duck.name;
-      duckImageElement.src = duck.img_url;
-      duckImageElement.alt = duck.name;
-      likesCountElement.textContent = duck.likes;
-      duckDisplay.style.display = 'block';
+        img.addEventListener('click', () => {
+          duckNameElement.textContent = duck.name;
+          duckImageElement.src = duck.img_url;
+          duckImageElement.alt = duck.name;
+          likesCountElement.textContent = duck.likes;
+          duckDisplay.style.display = 'block';
+        });
+      });
     });
-  });
-})
+});
+
+
+
 
 
 
